@@ -1,16 +1,21 @@
-package JVT;
 
+// Introduce the scanner tool used for reading user input
 import java.util.Scanner;
-// import whole java utility --> import java.util.*;
 
 public class input {
-    static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("your fav person: ");
-        if (userInput.hasNextLine()) {
-            String nameEntered = userInput.nextLine();
-            System.out.println("You typed " + nameEntered);
-        }
+        // Create a tool for reading user input and name it scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Print "Write a message: "
+        System.out.println("Write a message: ");
+
+        // Read the string written by the user, and assign it
+        // to program memory "String message = (string that was given as input)"
+        String message = scanner.nextLine();
+
+        // Print the message written by the user
+        System.out.println(message);
     }
 }
